@@ -15,6 +15,7 @@ Features:
 1. Proper Validation
 2. DB Relationship
 3. Sample Seeder is Included
+4. Employees Pagination
 
 ```
 php artisan migrate
