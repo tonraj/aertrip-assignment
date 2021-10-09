@@ -4,9 +4,25 @@
 
 This EMS tool is made with PHP Laravel.
 
+### Problem Statement
+
+A company has multiple departments and each employee works in one of the departments. Each employee may have multiple contact numbers and addresses. Create REST API using any PHP framework for performing various operations like creating departments, Add, edit, view, delete, search employees.
+
 API Base : https://localhost:8000/api
 
-> Postman Collection  is Included in Root of Repo named **Aertrip EMS**
+Features:
+
+1. Proper Validation
+2. DB Relationship
+3. Sample Seeder is Included
+
+```
+php artisan migrate
+php artisan db:seed
+php artisan serve
+```
+
+> Postman Collection  is Included in root of repo named **Aertrip EMS**
 
 Routes :
 
