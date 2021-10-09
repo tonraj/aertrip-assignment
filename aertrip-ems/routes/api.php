@@ -21,10 +21,12 @@ use App\Http\Controllers\Employ;
 
 Route::get('/ems/departments', [Department::class, 'view_all']);
 Route::post('/ems/department/add', [Department::class, 'add']);
+Route::get('/ems/department/{id}/get', [Department::class, 'get']);
 Route::patch('/ems/department/{id}/edit', [Department::class, 'edit']);
 Route::delete('/ems/department/{id}/delete', [Department::class, 'delete']);
 
 
+Route::get('/ems/employ/{id}/get', [Employ::class, 'get']);
 Route::get('/ems/employs', [Employ::class, 'search']);
 Route::post('/ems/department/add/employ', [Employ::class, 'add']);
 Route::patch('/ems/employ/{id}/edit', [Employ::class, 'edit']);

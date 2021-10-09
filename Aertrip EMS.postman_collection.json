@@ -338,6 +338,52 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Depatment by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ems/department/3/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ems",
+						"department",
+						"3",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employ by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ems/employ/1/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ems",
+						"employ",
+						"1",
+						"get"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

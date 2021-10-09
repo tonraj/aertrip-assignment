@@ -10,6 +10,18 @@ use App\Models\Address;
 class Employ extends Controller
 {
 
+    function get ($id){
+
+        $get = EmployModel::with('contacts')->with('addresses')->with('department')->where('id', $id)->first();
+
+        if($get == null){
+            return response()->json(array("detail" => "no employ found."), $status_code = 404);
+        }
+
+
+        return response()->json($get);
+    }
+
     function search (Request $request){
 
         $depts = new EmployModel;

@@ -14,6 +14,16 @@ class Department extends Controller
         return $depts->toArray();
     }
 
+    function get ($id){
+        $get = DepartmentModel::find($id);
+
+        if($get == null){
+            return response()->json(array("detail" => "no department found."), $status_code = 404);
+        }
+
+        return $get->toArray();
+    }
+
     function add (Request $request){
 
         $validator = \Validator::make($request->all(), [

@@ -43,3 +43,5 @@ For better understanding use POSTMAN.
 12. /ems/employ/edit/{id}/address
 13. /ems/employ/{id}/contact
 14. /ems/employ/{id}/address
+15. /ems/department/{id}/get
+16. /ems/employ/{id}/get
