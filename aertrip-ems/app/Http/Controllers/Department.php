@@ -34,9 +34,9 @@ class Department extends Controller
             return response()->json($validator->errors(), $status_code = 400);
         }
 
-        DepartmentModel::create($validator->validated());
+        $c = DepartmentModel::create($validator->validated());
 
-        return response()->json(array(), $status_code = 201);
+        return response()->json($c->toArray(), $status_code = 201);
     }
 
     function edit (Request $request, $id){

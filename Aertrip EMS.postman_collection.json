@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1c0112af-75e8-47a2-b5bb-efbe3638e48e",
+		"_postman_id": "466f641c-a0e0-494e-9851-ef9196a7059c",
 		"name": "Aertrip EMS",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,12 +11,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/departments",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/departments",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
@@ -32,27 +30,51 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/department/add?name=Name",
-					"protocol": "http",
+					"raw": "{{host}}//api/ems/department/add",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
+						"",
 						"api",
 						"ems",
 						"department",
 						"add"
-					],
-					"query": [
-						{
-							"key": "name",
-							"value": "Name"
-						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Rajendra Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/ems/department/add?name=Name",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"",
+								"api",
+								"ems",
+								"department",
+								"add"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Name"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Edit Department",
@@ -60,17 +82,15 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/department/1/edit?name=hi",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/department/{{department_id}}/edit?name=hi",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"department",
-						"1",
+						"{{department_id}}",
 						"edit"
 					],
 					"query": [
@@ -89,17 +109,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/department/1/delete",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/department/{{department_id}}/delete",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"department",
-						"1",
+						"{{department_id}}",
 						"delete"
 					]
 				}
@@ -112,12 +130,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employs?q=query",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employs?q=Rajendra Singh",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
@@ -126,7 +142,7 @@
 					"query": [
 						{
 							"key": "q",
-							"value": "query"
+							"value": "Rajendra Singh"
 						}
 					]
 				}
@@ -139,12 +155,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/department/add/employ?name&department_id",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/department/add/employ?name=dasdsa&department_id={{department_id}}",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
@@ -155,11 +169,11 @@
 					"query": [
 						{
 							"key": "name",
-							"value": null
+							"value": "dasdsa"
 						},
 						{
 							"key": "department_id",
-							"value": null
+							"value": "{{department_id}}"
 						}
 					]
 				}
@@ -172,17 +186,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/1/delete",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/{{employ_id}}/delete",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"employ",
-						"1",
+						"{{employ_id}}",
 						"delete"
 					]
 				}
@@ -195,12 +207,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/add/contact",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/add/contact",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
@@ -218,12 +228,10 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/add/address?address=9685925522&employ_id=1",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/add/address?address=9685925522&employ_id={{employ_id}}",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
@@ -238,7 +246,7 @@
 						},
 						{
 							"key": "employ_id",
-							"value": "1"
+							"value": "{{employ_id}}"
 						}
 					]
 				}
@@ -251,18 +259,16 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/edit/1/contact",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/edit/{{contact_id}}/contact",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"employ",
 						"edit",
-						"1",
+						"{{contact_id}}",
 						"contact"
 					]
 				}
@@ -275,18 +281,16 @@
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/edit/1/address",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/edit/{{address_id}}/address",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"employ",
 						"edit",
-						"1",
+						"{{address_id}}",
 						"address"
 					]
 				}
@@ -299,17 +303,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/1/contact",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/{{address_id}}/contact",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"employ",
-						"1",
+						"{{address_id}}",
 						"contact"
 					]
 				}
@@ -322,17 +324,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/1/address",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/employ/{{contact_id}}/address",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"employ",
-						"1",
+						"{{contact_id}}",
 						"address"
 					]
 				}
@@ -345,17 +345,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/department/3/get",
-					"protocol": "http",
+					"raw": "{{host}}/api/ems/department/{{department_id}}/get",
 					"host": [
-						"localhost"
+						"{{host}}"
 					],
-					"port": "8000",
 					"path": [
 						"api",
 						"ems",
 						"department",
-						"3",
+						"{{department_id}}",
 						"get"
 					]
 				}
@@ -368,7 +366,28 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/ems/employ/1/get",
+					"raw": "{{host}}/api/ems/employ/{{employ_id}}/get",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"ems",
+						"employ",
+						"{{employ_id}}",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Employ",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ems/employ/1/edit",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -379,11 +398,33 @@
 						"ems",
 						"employ",
 						"1",
-						"get"
+						"edit"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "department_id",
+			"value": "1"
+		},
+		{
+			"key": "employ_id",
+			"value": "2"
+		},
+		{
+			"key": "contact_id",
+			"value": "1"
+		},
+		{
+			"key": "address_id",
+			"value": "1"
 		}
 	]
 }

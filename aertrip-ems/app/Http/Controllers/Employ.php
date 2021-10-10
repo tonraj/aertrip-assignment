@@ -46,9 +46,9 @@ class Employ extends Controller
             return response()->json($validator->errors(), $status_code = 400);
         }
 
-        EmployModel::create($validator->validated());
+        $c = EmployModel::create($validator->validated());
 
-        return response()->json(array(), $status_code = 201);
+        return response()->json($c->toArray(), $status_code = 201);
     }
 
     function edit (Request $request, $id){
