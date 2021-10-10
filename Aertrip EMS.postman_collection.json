@@ -101,7 +101,38 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Edit Rajendra",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/ems/department/{{department_id}}/edit?name=Rajendra Pal Singh",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"ems",
+								"department",
+								"{{department_id}}",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Rajendra Pal Singh"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "Delete Department",
